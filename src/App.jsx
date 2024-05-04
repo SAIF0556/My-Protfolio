@@ -1,5 +1,4 @@
-import './styles/global.css'
-import './app.css'
+import './app.scss'
 import Hero from './Components/Hero/Hero'
 import Parallax from './Components/Parallax/Parallax'
 import MyService from './Components/MyService/MyService'
@@ -14,11 +13,19 @@ const App = () => {
         <NavBar />
         <Hero />
       </section>
-      <Parallax />
-      <MyService />
-      <Parallax />
+      <section id="MyService">
+        <Parallax type="services" />
+      </section>
+      <section>
+        <MyService />
+      </section>
+      <section id="Portfolio">
+        <Parallax type="portfolio" />
+      </section>
       <Portfolio />
-      <Contact />
+      <section id="Contact">
+        <Contact />
+      </section>
     </div>
   )
 }

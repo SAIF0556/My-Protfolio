@@ -1,3 +1,4 @@
+import './sidebar.scss'
 const variants = {
   open: {
     clipPath: 'circle(1200px at 50px 50px)',
@@ -9,17 +10,16 @@ const variants = {
   close: {
     clipPath: 'circle(30px at 50px 50px)',
     transition: {
-      delay: 0.1,
+      delay: 0.5,
       type: 'spring',
-      stifffness: 200,
-      damping: 20,
+      stiffness: 400,
+      damping: 40,
     },
   },
 }
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import './sidebar.css'
 import ToggleButton from './ToggleButton/ToggleButton'
 import Links from './links/Links'
 function Sidebar() {

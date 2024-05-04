@@ -5,19 +5,19 @@ import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 import { FaTwitter } from 'react-icons/fa'
-import './Navbar.css'
+import './Navbar.scss'
 function NavBar() {
   return (
-    <div className="nav">
+    <div className="navbar">
       <Sidebar />
 
       <div className="wrapper">
         <motion.span
-          initial={{ opacity: 0.5, scale: 0.5 }}
+          initial={{ opacity: 0, scale: 0.3 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
         >
-          SM Saif
+          SM SAIF
         </motion.span>
         <div className="social">
           <a href="https://www.linkedin.com/in/syed-mohd-saif-b46671217/">

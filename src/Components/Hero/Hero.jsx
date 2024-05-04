@@ -15,14 +15,27 @@ const textVariants = {
   },
   scrollButton: {
     opacity: 1,
-    y: 60,
+    y: 10,
     transition: {
-      duration: 1,
+      duration: 2,
       repeat: Infinity,
     },
   },
 }
 
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: '-20%',
+    opacity: 1,
+    transition: {
+      duration: 10,
+      repeat: Infinity,
+    },
+  },
+}
 function Hero() {
   return (
     <div className="hero">
@@ -53,7 +66,14 @@ function Hero() {
           </a>
         </motion.div>
       </div>
-      <div className="slidingText">WEB</div>
+      <motion.div
+        className="slidingText"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        WEB
+      </motion.div>
       <div className="imageConatiner">
         <img src="./20240430_122201137_iOS.jpg" alt="profile-pic"></img>
       </div>
