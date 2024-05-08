@@ -1,6 +1,7 @@
-import { React, useRef } from 'react'
+import { useRef, useState } from 'react'
 import './contact.scss'
 import { motion, useInView } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 const variants = {
   initial: {
@@ -19,27 +20,53 @@ const variants = {
 function Contact() {
   const ref = useRef()
   const isInView = useInView(ref, { margin: '-100px' })
+
+  const [error, setError] = useState(false)
+  const [succes, setSuccess] = useState(false)
+
+  const formRef = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_7exyp6c', 'template_x2gw4di', formRef.current, {
+        publicKey: 'kHoFerd0hdRI9omjz',
+      })
+      .then(
+        () => {
+          setSuccess(true)
+          console.log('SUCCESS!')
+        },
+        (error) => {
+          setError(true)
+          console.log('FAILED...', error.text)
+        },
+      )
+  }
+
   return (
     <motion.div
       ref={ref}
       className="Contact"
+      id="Contact"
       variants={variants}
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let Work Together </motion.h1>
+        <motion.h1 variants={variants}>Let's Work Together </motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Email</h2>
+          <h3>Email</h3>
           <span>smsaif767@gmail.com</span>
         </motion.div>
 
         <motion.div className="item" variants={variants}>
-          <h2>Email</h2>
-          <span>smsaif767@gmail.com</span>
+          <h3>Address</h3>
+          <span>New Friends Colony, New Delhi</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Email</h2>
-          <span>smsaif767@gmail.com</span>
+          <h3>Phone</h3>
+          <span>+917324923485</span>
         </motion.div>
       </motion.div>
       <motion.div className="formContainer">
@@ -47,7 +74,7 @@ function Contact() {
           className="phoneSvg"
           initial={{ opacity: 1 }}
           animate={isInView && { opacity: 0 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 2, duration: 0.5 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32 32">
             <motion.path
@@ -71,14 +98,23 @@ function Contact() {
           </svg>
         </motion.div>
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" />
-          <input type="text" required placeholder="Email" />
-          <textarea rows={8} placeholder="Message" name="" id=""></textarea>
+          <input type="text" required placeholder="Name" name="from_name" />
+          <input type="text" required placeholder="Email" name="user_email" />
+          <textarea
+            rows={8}
+            placeholder="Message"
+            name="message"
+            id=""
+          ></textarea>
           <button>Submit</button>
+          {error && <p>Error</p>}
+          {succes && <p>Succes</p>}
         </motion.form>
       </motion.div>
     </motion.div>

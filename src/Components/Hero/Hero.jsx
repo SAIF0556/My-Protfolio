@@ -54,7 +54,9 @@ function Hero() {
                 See My Resume
               </a>
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants}>
+              <a href="#Contact">Contact Me</a>
+            </motion.button>
           </motion.div>
           <a href="#Contact">
             <motion.img

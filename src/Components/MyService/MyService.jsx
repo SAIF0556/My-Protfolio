@@ -42,16 +42,19 @@ function MyService() {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="people" />
-          <h1>
-            <motion.b whileHover={{ color: 'orange' }}>Unique</motion.b> Ideas
-          </h1>
+          {/*Don't let yourself make excuses for not doing the things you want to do */}
+          <h2>
+            Don't let
+            <motion.b whileHover={{ color: 'orange' }}> yourself</motion.b> make
+            excuses for
+          </h2>
         </div>
         <div className="title">
-          <h1>
-            <motion.b whileHover={{ color: 'orange' }}>For Your</motion.b>{' '}
-            Bussiness.
-          </h1>
-          <button>WHAT WE DO?</button>
+          <h2>
+            <motion.b whileHover={{ color: 'orange' }}> not doing</motion.b> the
+            things you want to do.
+          </h2>
+          <button>Sam Altman</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -59,12 +62,11 @@ function MyService() {
           className="box"
           whileHover={{ background: 'lightgray', color: 'black' }}
         >
-          <h2>Branding</h2>
+          <h2>Computer Science Enthusiast</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-            inventore corporis sed ullam possimus ipsam facere praesentium
-            debitis aperiam ipsum itaque voluptatem dicta! Delectus ratione
-            minima adipisci mollitia necessitatibus hic!
+            I'm a passionate Computer Science graduate from Jamia Millia Islamia
+            (GPA: 9.1) with a strong foundation in programming languages and web
+            development frameworks.
           </p>
           <button>Go</button>
         </motion.div>
@@ -72,12 +74,11 @@ function MyService() {
           className="box"
           whileHover={{ background: 'lightgray', color: 'black' }}
         >
-          <h2>Branding</h2>
+          <h2>Tech-Savvy Problem Solver</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-            inventore corporis sed ullam possimus ipsam facere praesentium
-            debitis aperiam ipsum itaque voluptatem dicta! Delectus ratione
-            minima adipisci mollitia necessitatibus hic!
+            I enjoy tackling challenges and building innovative solutions. My
+            skills encompass C++, C, JavaScript, SQL, and popular libraries like
+            React.js, Node.js, and more.
           </p>
           <button>Go</button>
         </motion.div>
@@ -85,12 +86,11 @@ function MyService() {
           className="box"
           whileHover={{ background: 'lightgray', color: 'black' }}
         >
-          <h2>Branding</h2>
+          <h2>Lifelong Learner</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-            inventore corporis sed ullam possimus ipsam facere praesentium
-            debitis aperiam ipsum itaque voluptatem dicta! Delectus ratione
-            minima adipisci mollitia necessitatibus hic!
+            I'm constantly seeking opportunities to expand my knowledge and
+            explore new technologies. This includes ventures into Machine
+            Learning and Natural Language Processing.
           </p>
           <button>Go</button>
         </motion.div>
@@ -98,12 +98,11 @@ function MyService() {
           className="box"
           whileHover={{ background: 'lightgray', color: 'black' }}
         >
-          <h2>Branding</h2>
+          <h2>Passionate Creator</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-            inventore corporis sed ullam possimus ipsam facere praesentium
-            debitis aperiam ipsum itaque voluptatem dicta! Delectus ratione
-            minima adipisci mollitia necessitatibus hic!
+            I bring my skills to life through personal projects. From building
+            responsive web applications to tackling complex data structures, I
+            enjoy the process of creation.
           </p>
           <button>Go</button>
         </motion.div>

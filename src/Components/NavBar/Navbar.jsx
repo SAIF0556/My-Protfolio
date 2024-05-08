@@ -20,16 +20,32 @@ function NavBar() {
           SM SAIF
         </motion.span>
         <div className="social">
-          <a href="https://www.linkedin.com/in/syed-mohd-saif-b46671217/">
+          <a
+            href="https://www.linkedin.com/in/syed-mohd-saif-b46671217/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin />
           </a>
-          <a href="FaTwitter">
+          <a
+            href="https://github.com/SAIF0556"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/SAIF0556/">
+          <a
+            href="https://leetcode.com/SAIF0556/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <SiLeetcode />
           </a>
-          <a href="https://twitter.com/SMS_20BCS">
+          <a
+            href="https://twitter.com/SMSaif86121972"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaTwitter />
           </a>
         </div>
