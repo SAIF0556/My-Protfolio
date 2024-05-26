@@ -18,6 +18,8 @@
     h1 {
       @include mobile {
         position: absolute;
+        text-align: center;
+        align-items: center;
       }
     }
     .progressBar {
