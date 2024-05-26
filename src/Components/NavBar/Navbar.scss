@@ -1,18 +1,31 @@
+@import '../../app.scss';
 .navbar {
   height: 100px;
   .wrapper {
     max-width: 1080px;
     margin: auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @include tablet {
+      margin: auto 30px auto 50px;
+    }
+    @include tablet {
+      margin: auto 30px auto 90px;
+    }
     span {
       font-weight: bold;
     }
     .social {
       display: flex;
       gap: 20px;
+      @include mobile {
+        gap: 10px;
+        margin-left: 10px;
+      }
     }
   }
 }

@@ -1,9 +1,15 @@
+@import '../../app.scss';
 #services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mobile {
+    align-self: center;
+    text-align: center;
+    flex-direction: column;
+  }
 
   .textContainer {
     flex: 0.75;
@@ -23,6 +29,9 @@
       width: 300px;
       border: none;
       border-top: 0.5px solid gray;
+      @include mobile {
+        width: 250px;
+      }
     }
   }
 
@@ -32,12 +41,20 @@
     flex-direction: column;
     align-items: center;
     // background-color: purple;
+    @include mobile {
+      width: 100%;
+    }
 
     .title {
       display: flex;
       align-items: center;
       gap: 40px;
 
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
       img {
         width: 230px;
         height: 100px;
@@ -48,6 +65,9 @@
       h2 {
         font-size: 50px;
         font-weight: 100;
+        @include mobile {
+          font-size: 36px;
+        }
       }
       button {
         width: 230px;
@@ -57,6 +77,11 @@
         border: none;
         font-size: 20px;
         cursor: pointer;
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
       }
     }
   }
@@ -66,6 +91,11 @@
     max-width: 1080px;
     margin: auto;
 
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .box {
       padding: 30px;
       border: 0.5px solid gray;
@@ -73,6 +103,12 @@
       flex-direction: column;
       justify-content: space-between;
       width: 30%;
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+      }
       h2 {
         padding-bottom: 5px;
         color: orange;
@@ -84,6 +120,14 @@
         background-color: orange;
         border: none;
         cursor: pointer;
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
